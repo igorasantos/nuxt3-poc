@@ -1,11 +1,13 @@
 <template>
-  <p>hello</p>
-  <p>param ('hash'): {{ route.params.hash }}</p>
-  <p>local state (reactive): {{ stateObj.count }}</p>
-  <p>local state (ref str): {{ dataTest }}</p>
-  <button @click="add">
-    Add
-  </button>
+  <div>
+    <p>hello</p>
+    <p>param ('hash'): {{ route.params.hash }}</p>
+    <p>local state (reactive): {{ stateObj.count }}</p>
+    <p>local state (ref str): {{ dataTest }}</p>
+    <button @click="add">
+      Add
+    </button>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -22,7 +24,8 @@ definePageMeta({
     const valueToCheck: string = route.params.hash.toString();
     // verifica tamanho da route param p/ ser exatamente 20 dígitos e/ou letras
     return /^[\d\w]{20}$/.test(valueToCheck);
-  }
+  },
+  layout: 'purple'
 })
 
 useHead({

@@ -6,11 +6,11 @@
 </template>
 
 <script lang="ts" setup>
-import Nav from '../components/Nav.vue';
+import Nav from '../components/Nav.vue'
 </script>
 
 <style scoped>
 div {
-  background-color: lightblue;
+  background-color: lightgreen;
 }
 </style>
